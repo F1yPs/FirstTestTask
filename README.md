@@ -1,8 +1,8 @@
 Инструкция по запуску
 
-Версия Java - 19.0.1
-Система сборки - Maven 3.8.7
-Использоваталсь библиотека Apache Commons IO 2.11.0 
++ Версия Java - 19.0.1
++ Система сборки - Maven 3.8.7
++ Использоваталсь библиотека Apache Commons IO 2.11.0 
 Для подключения к Maven:
 https://mvnrepository.com/artifact/commons-io/commons-io/2.11.0
 Добавления в pom.xml
@@ -15,7 +15,7 @@ https://mvnrepository.com/artifact/commons-io/commons-io/2.11.0
         </dependency>
     </dependencies>
 	
-Apache Maven Shade Plugin 3.4.1
++ Apache Maven Shade Plugin 3.4.1
 https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-shade-plugin/3.4.1
 ДОбавление в pom.xml
 <dependency>
@@ -53,16 +53,16 @@ https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-shade-plugin/3
 Файлы должно находиться на одном уровне с директорией src.
 
 Для работы с программой, необходимо перейти в директорию проекта, после чего собрать проект:
-
+```
 mvn package
-
+```
 Примеры запуска из командной строки для Windows(если файлы находяться в корне проекта):
-java -cp target/TestTaskJava-1.0-SNAPSHOT.jar org.example.MergeJava -i -a out.txt in.txt (для целых чисел по возрастанию)
-java -cp target/TestTaskJava-1.0-SNAPSHOT.jar org.example.MergeJava -s out.txt in1.txt in2.txt in3.txt (для строк по возрастанию)
-java -cp target/TestTaskJava-1.0-SNAPSHOT.jar org.example.MergeJava -d -s out.txt in1.txt in2.txt (для строк по убыванию)
++ java -cp target/TestTaskJava-1.0-SNAPSHOT.jar org.example.MergeJava -i -a out.txt in.txt (для целых чисел по возрастанию)
++ java -cp target/TestTaskJava-1.0-SNAPSHOT.jar org.example.MergeJava -s out.txt in1.txt in2.txt in3.txt (для строк по возрастанию)
++ java -cp target/TestTaskJava-1.0-SNAPSHOT.jar org.example.MergeJava -d -s out.txt in1.txt in2.txt (для строк по убыванию)
 
 Если разместить входные и выходные файлы в отдельную директорию dirName, то примеры запуска будет следующие:
-java -cp target/TestTaskJava-1.0-SNAPSHOT.jar org.example.MergeJava -s ./<dirName>/out.txt ./<dirName>/in4.txt ./<dirName>/in5.txt
++ java -cp target/TestTaskJava-1.0-SNAPSHOT.jar org.example.MergeJava -s ./dirName/out.txt ./dirName/in4.txt ./dirName/in5.txt
 
 
 
